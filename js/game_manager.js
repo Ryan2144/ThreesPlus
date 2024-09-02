@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
 
-  this.startTiles     = 9;
+  this.startTiles     = 3*(size-1);
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -214,8 +214,8 @@ GameManager.prototype.move = function (direction) {
 GameManager.prototype.updatescore=function(){
   var cells=this.grid.cells;
   this.score=0;
-  for(var i=0;i<4;i++){
-    for(var j=0;j<4;j++){
+  for(var i=0;i<size;i++){
+    for(var j=0;j<size;j++){
       var tile=cells[i][j];
       if(tile){
         this.score+=this.scoretile(tile.value);
