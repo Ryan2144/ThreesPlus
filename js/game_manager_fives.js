@@ -225,11 +225,11 @@ GameManager.prototype.updatescore=function(){
 };
 
 GameManager.prototype.scoretile=function(tile){
-  if(tile<3){
+  if(tile<5){
     return 0;
   }
-  var score=3;
-  while(tile>3){
+  var score=5;
+  while(tile>5){
     score*=3;
     tile/=2;
   }
