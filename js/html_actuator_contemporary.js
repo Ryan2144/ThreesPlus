@@ -88,7 +88,7 @@ HTMLActuator.prototype.clearmerged=function(){//Otherwise parts of tiles will co
 };
 
 HTMLActuator.prototype.islarge=function(value){
-  if(value>=192&&value<=6144){
+  if(value>=192&&value<=6755399441055744){
     return true;
   }
   return false;
