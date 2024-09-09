@@ -1876,6 +1876,9 @@ hr {
   h1.title {
     font-size: 27px;
     margin-top: 15px; }
+  
+  span.title-lg {
+    font-size: 55px; }
 
   .container {
     width: 280px;
